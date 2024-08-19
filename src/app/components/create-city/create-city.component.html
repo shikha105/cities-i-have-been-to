@@ -1,0 +1,62 @@
+<form class="cityForm" [formGroup]="addCityForm">
+  <h4>Add a new city</h4>
+  <br />
+
+  <input type="text" placeholder="Enter city id" [formControl]="cityId" />
+  <h5 class="red-text" [hidden]="cityId.valid || cityId.untouched">Enter id</h5>
+  <br />
+
+  <input type="text" placeholder="Enter city name" [formControl]="name" />
+  <h5 class="red-text" [hidden]="name.valid || name.untouched">Enter Name</h5>
+  <br />
+  <input
+    type="text"
+    placeholder="Enter date of visit"
+    [formControl]="dateOfVisit"
+  />
+  <h5 class="red-text" [hidden]="dateOfVisit.valid || dateOfVisit.untouched">
+    Enter Date of visit
+  </h5>
+  <br />
+  <input
+    type="text"
+    placeholder="what was your first impression"
+    [formControl]="firstImpression"
+  />
+  <h5
+    class="red-text"
+    [hidden]="firstImpression.valid || firstImpression.untouched"
+  >
+    First Impression
+  </h5>
+  <br />
+
+  <textarea placeholder="thingsIDid" [formControl]="thingsIDid"></textarea>
+  <h5 class="red-text" [hidden]="thingsIDid.valid || thingsIDid.untouched">
+    thingsIDid
+  </h5>
+  <br />
+  <textarea placeholder="bestActivity" [formControl]="bestActivity"></textarea>
+  <h5 class="red-text" [hidden]="bestActivity.valid || bestActivity.untouched">
+    bestActivity
+  </h5>
+  <br />
+  <textarea
+    placeholder="overallComment "
+    [formControl]="overallComment"
+  ></textarea>
+  <h5
+    class="red-text"
+    [hidden]="overallComment.valid || overallComment.untouched"
+  >
+    overallComment
+  </h5>
+  <br />
+  <button
+    class="btn-green"
+    [disabled]="addCityForm.invalid"
+    (click)="onSaveCity()"
+  >
+    create
+  </button>
+</form>

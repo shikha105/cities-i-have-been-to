@@ -1,0 +1,25 @@
+div {
+  background-color: #f9f9f9; /* Light blue background */
+  padding: 20px; /* Add some padding around the content */
+  border-radius: 10px; /* Rounded corners for a softer look */
+  max-width: 600px; /* Set a maximum width for the content */
+  margin: 20px auto; /* Center the container */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  font-family: "Helvetica", sans-serif; /* Clean and modern font */
+  color: #333; /* Dark gray text color */
+}
+
+p {
+  font-size: 18px; /* Set a larger font size for better readability */
+  line-height: 1.6; /* Improve line spacing */
+  margin-bottom: 0; /* Remove bottom margin to keep the text compact */
+}
+
+a {
+  color: #0066cc; /* Set a blue color for the email link */
+  text-decoration: none; /* Remove underline from the link */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline link on hover */
+}

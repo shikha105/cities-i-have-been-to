@@ -1,0 +1,12 @@
+<div>
+  <h2>Cities:</h2>
+  <ul>
+    @for(c of cities; track c){
+    <li>
+      <a [routerLink]="['/city', c.cityId]">{{ c.name }}</a>
+    </li>
+    } @empty {
+    <li>No cities found</li>
+    }
+  </ul>
+</div>
