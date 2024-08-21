@@ -33,4 +33,4 @@ jobs:
       - name: Copy to S3 Bucket
         if: success()
         run: |
-          aws s3 cp ./public/* s3://bucketforcity --region us-west-1
+          aws s3 cp ./public/* s3://bucketforcity --region us-west-2
