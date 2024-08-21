@@ -32,5 +32,4 @@ jobs:
           
       - name: Copy to S3 Bucket
         run: |
-        
-          aws s3 cp ./dist/* s3://bucketforcity 
+          aws s3 cp /home/runner/work/cities-i-have-been-to/cities-i-have-been-to/dist/cities-i-have-been-to/browser s3://bucketforcity 
