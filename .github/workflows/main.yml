@@ -19,7 +19,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v2
         with:
           node-version: 22.3.0
         
@@ -29,9 +29,7 @@ jobs:
           npm install -g @angular/cli
           npm install
           ng build
+          aws s3 sync ./dist/cities-i-have-been-to/browser s3://bucketforcity
+     
           
-      - name: Copy to S3 Bucket
-        if: success()
-        run: |
           
-          aws s3 cp ./dist/cities-i-have-been-to/browser s3://bucketforcity --debug
